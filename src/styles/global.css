@@ -1,0 +1,77 @@
+:root {
+    --bg: #F5E9EF;
+    --ink: #1A1A1A;
+    --muted: #7e6073;
+    --rule: #DCCFD6;
+    --hover-bg: #EFE3EA;
+    --accent: #8A4A6B;
+    --nav-pill: #DEC3D1;
+
+
+    --font-ui: "Anaheim", sans-serif;
+    --font-prose: "Andada Pro", Georgia, serif;
+
+    --step--1: 0.833rem;
+    --step-0: 1rem;
+    --step-1: 1.2rem;
+    --step-2: 1.5rem;
+    --step-3: 1.953rem;
+    --step-4: 2.441rem;
+
+    --space-3xs: 4px;
+    --space-2xs: 8px;
+    --space-xs: 12px;
+    --space-s: 16px;
+    --space-m: 24px;
+    --space-l: 32px;
+    --space-xl: 48px;
+    --space-2xl: 64px;
+    --space-3xl: 96px;
+
+    --measure: 65ch;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: var(--step-0);
+    font-family: var(--font-prose);
+    line-height: 1.55rem;
+}
+
+footer {
+    margin-top: auto;
+}
+
+
+a {
+    color: inherit;
+}
+
+
+
+
+p {
+    max-width: var(--measure);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-ui);
+    font-weight: 500px;
+    line-height: 1.15rem;
+}
+
+.container {
+    width: min(100% - 2*var(--space-m), 800px);
+    margin-inline: auto;
+
+}

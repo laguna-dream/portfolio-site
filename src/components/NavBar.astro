@@ -1,0 +1,83 @@
+---
+const path = Astro.url.pathname;
+---
+
+<header>
+	<nav aria-label="main">
+		<a href="/" aria-label="simar-home">
+			<img src="/hibiscus.svg" height="48" width="48" /></a
+		>
+		<ul class="links">
+			<li>
+				<a href="/" class={path === "/" ? "active" : ""}>Work</a>
+			</li>
+			<li>
+				<a href="/about" class={path === "/about" ? "active" : ""}
+					>About</a
+				>
+			</li>
+			<li>
+				<a href="/blog" class={path === "/blog" ? "active" : ""}>Blog</a
+				>
+			</li>
+			<li>
+				<a href="/library" class={path === "/library" ? "active" : ""}
+					>Library</a
+				>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<style>
+	header {
+		padding-top: var(--space-m);
+		border-bottom: 1px dashed var(--ink);
+	}
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: var(--space-s);
+		font: var(--font-ui);
+	}
+
+	nav a {
+		text-decoration: none;
+	}
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+		list-style-type: none;
+		gap: var(--space-m);
+	}
+
+	.links a {
+		font-family: var(--font-ui);
+		font-size: var(--step-1);
+		text-decoration: none;
+		padding: 4px 10px;
+		border-radius: 2px;
+	}
+
+	.links a.active,
+	.links a:hover {
+		background: linear-gradient(100deg, #dec3d1, #c3ded9, #d3aacd);
+		background-size: 200% 200%;
+		animation: shiftColor 10s ease infinite;
+	}
+
+	@keyframes shiftColor {
+		0% {
+			background-position: 0% 100%;
+		}
+		50% {
+			background-position: 50% 100%;
+		}
+		10% {
+			background-position: 100% 150%;
+		}
+	}
+</style>

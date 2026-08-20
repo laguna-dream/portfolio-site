@@ -1,0 +1,71 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer>
+	<div class="footerbox container">
+		<ul class="links">
+			<li>
+				<a href="instagram.com">Instagram</a>
+			</li>
+			<li>
+				<a href="mailto:simarg77@gmail.com">Email</a>
+			</li>
+			<li>
+				<a href="soundcloud.com">Soundcloud</a>
+			</li>
+
+			<li>
+				<a href="linkedin.com">Linkedin</a>
+			</li>
+		</ul>
+	</div>
+</footer>
+
+<style>
+	footer {
+		padding-top: var(--space-m);
+	}
+
+	.footerbox {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: var(--space-s);
+		font: var(--font-ui);
+		border-top: 1px dashed var(--ink);
+	}
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+		list-style-type: none;
+		gap: var(--space-m);
+	}
+
+	.links a {
+		font-family: var(--font-ui);
+		font-size: var(--step-0);
+		text-decoration: none;
+		padding: 4px 10px;
+		border-radius: 2px;
+	}
+
+	.links a:hover {
+		background: linear-gradient(100deg, #dec3d1, #c3ded9, #d3aacd);
+		background-size: 200% 200%;
+		animation: shiftColor 10s ease infinite;
+	}
+
+	@keyframes shiftColor {
+		0% {
+			background-position: 0% 100%;
+		}
+		50% {
+			background-position: 50% 100%;
+		}
+		10% {
+			background-position: 100% 150%;
+		}
+	}
+</style>
